@@ -94,7 +94,7 @@ export default function Home() {
     const loadMoreButtonHandler = () => {
         if (filterData?.length > showMoreEvents && filterData?.length >= 6) {
             return (
-                <button className='btn btn-lg btn-secondary mt-5 rounded-1 d-block mx-auto w-25 fw-medium' onClick={showMoreEventsHandler}>
+                <button className='btn btn-lg btn-secondary mt-5 rounded-1 d-block mx-auto w-50 w-lg-25 fw-medium' onClick={showMoreEventsHandler}>
                     Load More
                 </button>
             );
@@ -102,7 +102,7 @@ export default function Home() {
             return null;
         } else {
             return (
-                <button className='btn btn-lg btn-secondary mt-5 rounded-1 d-block mx-auto w-25 fw-medium' disabled>
+                <button className='btn btn-lg btn-secondary mt-5 rounded-1 d-block mx-auto w-50 w-lg-25 fw-medium' disabled>
                     No More Data
                 </button>
             );
