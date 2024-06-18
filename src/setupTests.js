@@ -2,4 +2,10 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
+// src/setupTests.js
 import '@testing-library/jest-dom';
+const { TextDecoder, TextEncoder } = require('util');
+
+global.TextDecoder = TextDecoder;
+global.TextEncoder = TextEncoder;
+

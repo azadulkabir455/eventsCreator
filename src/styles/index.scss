@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+$primary: #FF46AF;
+$secondary: #FFDC60;
+$info: #57C9DA;
+$warning: #FF1B4F;
+$titleColor: #343F52;
+$bodyColor: #60697b;
+$metaColor: #aab0bc;
+$titleFont: "Urbanist", sans-serif;
+$bodyFont: "Manrope", sans-serif;
+$font: "Sofia", cursive;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+span,
+button,
+h2,
+p {
+    font-family: $bodyFont;
+}
+
+.btnFont {
+    font-family: $titleFont !important;
+}
+
+label {
+    font-family: $bodyFont;
+    color: $bodyColor;
+}
+
+input,
+input::placeholder {
+    font-family: $bodyFont;
+    font-size: 14px;
+}
+
+.userProfile {
+    p {
+        font-family: $bodyFont;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        color: $titleColor;
+    }
+}
+
+.spacing {
+    padding: 80px 0;
+    @media only screen and (max-width: 767px) {
+       padding: 40px 0; 
+    }
+}
+
+.eventImage {
+    min-height: 250px;
+    border: 2px dashed #dee2e6;
+    font-family: $bodyFont;
+
+    .uploadeventImage {
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .close {
+            top: -15px;
+            right: -15px;
+            cursor: pointer;
+        }
+    }
+}
+
+.modalContainer {
+    font-family: $bodyFont;
+}
+
+.banner {
+    padding: 140px 0 160px;
+    background-image: url("../../public/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, #fff, transparent);
+        z-index: 0;
+    }
+
+    h3 {
+        font-family: $titleFont;
+        color: $bodyColor;
+        font-size: 62px;
+        text-transform: capitalize;
+        max-width: 520px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 100px 0 120px;
+        h3 {
+            font-size: 36px;
+            padding: 0 20px;
+        }
+    }
+}
+
+.filterArea {
+    width: 70%;
+    margin-top: -50px;
+    background-color: #f2f2f2;
+
+    .filterType {
+        flex-basis: 23%;
+    }
+
+    .filter {
+        flex-basis: 77%;
+    }
+
+    input,
+    input:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    select,
+    select:focus {
+        border-color: #d2d2d2;
+        font-family: $bodyFont;
+        color: $titleColor;
+        text-transform: capitalize;
+        box-shadow: none;
+    }
+
+    .daterange {
+        width: 220px;
+    }
+    @media only screen and (max-width: 992px) {
+        width: 95%;
+        margin-top: -40px;
+        .filterType {
+            flex-basis: 40%;
+        }
+    
+        .filter {
+            flex-basis: 60%;
+        }
+    }
+}
+
+.signInLeftSideImg {
+    height: 80vh;
+    background: url("../../public/signinbanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media only screen and (max-width: 992px) {
+        height: 40vh;
+    }
+}
+
+// Date picker custom css
+.react-datepicker__month-container {
+    font-family: $bodyFont;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range,
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--keyboard-selected:hover,
+.react-datepicker__day--in-range:hover {
+    color: #fff;
+    background-color: $primary;
+    border-radius: 50px;
+}
+
+.react-datepicker__day--keyboard-selected:hover,
+.react-datepicker__day--in-range:hover {
+    color: $titleColor;
+    background-color: $secondary;
+}
+
+.react-datepicker__close-icon::after {
+    padding: 1px 0 3px;
+    background-color: $primary;
+}
+
+.react-datepicker__view-calendar-icon {
+    display: flex;
+    align-items: center;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+
+@import "~bootstrap/scss/bootstrap";

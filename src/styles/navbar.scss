@@ -1,0 +1,40 @@
+@import "./index.scss";
+
+.navbar {
+    .navbar-brand {
+        font-family: $font;
+        color: $titleColor;
+        font-size: 40px;
+    }
+    .nav-item {
+        .nav-link, .dropdown-item {
+            font-family: $titleFont;
+            font-size: 17px;
+            line-height: 29px;
+            font-weight: 600;
+            color: $titleColor;
+            transition: .2s linear;
+            &:hover {
+                color: $primary;
+            }
+        }
+        button {
+            font-family: $titleFont;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
+}
+.loginFormTitle {
+    font-family: $titleFont;
+    color: $titleColor;
+    text-transform: capitalize;
+    font-size: 46px;
+    line-height: 56px;
+}
+.loginFormFooter {
+    font-family: $bodyFont;
+    color: $titleColor;
+    font-size: 16px;
+}

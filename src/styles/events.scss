@@ -1,0 +1,78 @@
+@import "./index.scss";
+
+.events {
+    img {
+        width: 100%;
+        height: 240px;
+    }
+
+    .eventsContent {
+        margin-top: -40px;
+
+        .eventsMeta {
+            span {
+                font-family: $bodyFont;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        h2 {
+            font-family: $titleFont;
+            font-size: 27px;
+            line-height: 36px;
+            font-weight: 600;
+            color: $titleColor;
+        }
+
+        p {
+            font-family: $bodyFont;
+            font-size: 17px;
+            line-height: 29px;
+            color: $bodyColor;
+        }
+
+        .metaData {
+            span {
+                font-family: $bodyFont;
+                color: $titleColor;
+                text-transform: capitalize;
+                font-size: 15px;
+            }
+
+            p {
+                font-family: $bodyColor;
+                color: $metaColor;
+                font-size: 14px;
+            }
+        }
+
+        .btnGroup {
+            button {
+                font-family: $bodyFont;
+                font-weight: 600;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .eventsContent {
+
+            h2 {
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            p {
+                font-size: 15px;
+                list-style: 22px;
+            }
+
+            .metaData {
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
