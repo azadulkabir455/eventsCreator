@@ -112,7 +112,7 @@ export default function Home() {
     useEffect(() => {
         setFilterData(events);
     }, [events]);
-    
+
     useEffect(() => {
         loadMoreButtonHandler();
     }, [filterData]);
@@ -120,7 +120,7 @@ export default function Home() {
     return (
         <>
             <div className="container p-0">
-                <Banner title={"Transforming Ideas into Actions."}/>
+                <Banner title={"Transforming Ideas into Actions."} />
                 <div className="filterArea px-3 py-4 px-md-5 py-md-4 shadow rounded-1 mx-auto position-relative z-index-2">
                     <div className="filters d-flex p-2 bg-white rounded-1 shadow-none">
                         <div className="filterType">
@@ -146,26 +146,27 @@ export default function Home() {
             <div className="container spacing">
                 {
                     isLoading ? <Loader /> :
-                        <div className="row g-4 g-xl-5">
-                            {
-                                filterData?.slice(0, showMoreEvents).map((event) =>
-                                    <div className="col-12 col-lg-4">
-                                        <Event
-                                            id={event.id}
-                                            eventImg={event.eventImg}
-                                            userInfo={event.userInfo}
-                                            title={event.title}
-                                            description={event.description}
-                                            startDate={event.startdate}
-                                            endDate={event.enddate}
-                                            location={event.location}
-                                            createdAt={event.createdAt}
-                                            interestedCount={event.interestedCount}
-                                        />
-                                    </div>
-                                )
-                            }
-
+                        <div>
+                            <div className="row g-4 g-xl-5">
+                                {
+                                    filterData?.slice(0, showMoreEvents).map((event) =>
+                                        <div className="col-12 col-lg-4">
+                                            <Event
+                                                id={event.id}
+                                                eventImg={event.eventImg}
+                                                userInfo={event.userInfo}
+                                                title={event.title}
+                                                description={event.description}
+                                                startDate={event.startdate}
+                                                endDate={event.enddate}
+                                                location={event.location}
+                                                createdAt={event.createdAt}
+                                                interestedCount={event.interestedCount}
+                                            />
+                                        </div>
+                                    )
+                                }
+                            </div>
                             {
                                 loadMoreButtonHandler()
                             }
