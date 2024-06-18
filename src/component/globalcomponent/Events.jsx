@@ -132,7 +132,7 @@ export default function Event(props) {
         <div className="eventsContent  mx-1 mx-md-3 p-4 border-top border-4 border-secondary bg-white shadow rounded-1 position-relative z-2">
           <div className="eventsMeta mb-4 d-flex justify-content-between">
             <div>
-              <span class="badge bg-dark rounded-pill text-capitalize">
+              <span className="badge bg-dark rounded-pill text-capitalize">
                 {userInfo?.name}
               </span>
               <small className='mt-1 text-muted d-block d-flex align-items-center'>

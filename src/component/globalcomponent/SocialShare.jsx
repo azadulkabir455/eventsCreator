@@ -21,13 +21,13 @@ function SocialShare({ id }) {
                     <Popover>
                         <Popover.Body>
                             <div className="flex justify-content-between">
-                                <RedditShareButton url={`events/${id}`} className='px-1'>
+                                <RedditShareButton url={`events-creator.vercel.app/events/${id}`} className='px-1'>
                                     <RedditIcon size={32} round />
                                 </RedditShareButton>
-                                <TwitterShareButton url={`events/${id}`} className='px-1'>
+                                <TwitterShareButton url={`events-creator.vercel.app/events/${id}`} className='px-1'>
                                     <XIcon size={32} round />
                                 </TwitterShareButton>
-                                <LinkedinShareButton url={`events/${id}`} className='px-1'>
+                                <LinkedinShareButton url={`events-creator.vercel.app/events/${id}`} className='px-1'>
                                     <LinkedinIcon size={32} round />
                                 </LinkedinShareButton>
                             </div>
