@@ -183,22 +183,35 @@ export default function Event(props) {
             </div>
           </div>
           <div className="btnGroup d-flex">
-            <button
-              className='btn btn-lg btn-secondary rounded-1 me-2 w-100 d-flex align-items-center justify-content-center'
-              onClick={interestHandler}
-            >
-              {
-                interest.includes(currentUser?.uid) ?
-                  <>
-                    Interested
-                    <Star size={18} className="ms-2" style={{ fill: "#000" }} />
-                  </> :
-                  <>
+            {
+              currentUser ?
+                <button
+                  className='btn btn-lg btn-secondary rounded-1 me-2 w-100 d-flex align-items-center justify-content-center'
+                  onClick={interestHandler}
+                >
+                  {
+                    interest.includes(currentUser?.uid) ?
+                      <>
+                        Interested
+                        <Star size={18} className="ms-2" style={{ fill: "#000" }} />
+                      </> :
+                      <>
+                        Interest
+                        <Star size={18} className="ms-2" />
+                      </>
+                  }
+                </button> :
+                <Link to="/signin" className='text-decoration-none d-block w-100 me-2'>
+                  <button
+                    className='btn btn-lg btn-secondary rounded-1 me-2 w-100 d-flex align-items-center justify-content-center'
+                    onClick={interestHandler}
+                  >
                     Interest
                     <Star size={18} className="ms-2" />
-                  </>
-              }
-            </button>
+                  </button>
+                </Link>
+            }
+
             <SocialShare id={id} />
           </div>
         </div>
