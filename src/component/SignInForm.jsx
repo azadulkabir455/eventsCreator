@@ -39,7 +39,7 @@ function SignInForm() {
         const { email, password } = values;
         dispatch(login({ email, password })).then(() => {
             navigate("/");
-            toast("You are successfully logedin");
+            toast("You are successfully loged in");
         });
     };
 
